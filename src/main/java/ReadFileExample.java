@@ -21,11 +21,12 @@ public class ReadFileExample {
             e.printStackTrace();
             System.out.println("error");
         }
+
         for (int i = 1; i < lines.size(); i++) {
             String[] split = lines.get(i).split(";");
             String nbSurvived = split[1];
             survivedValue.add(nbSurvived);
-            String nbPclass = split[4];
+            String nbPclass = split[2];
             featureValue.add(nbPclass);
         }
         for (String e : featureValue){

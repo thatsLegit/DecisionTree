@@ -11,7 +11,7 @@ public class Entropy {
     Set<String> Pclass;
     Set<String> Name;
     Set<String> Sex;
-    Set<String> Age;
+    static Set<String> Age;
     Set<String> SibSp;
     Set<String> Parch;
     Set<String> Ticket;
@@ -37,22 +37,25 @@ public class Entropy {
     }
 
     public static String refactorAge(String age) {
-        AgeCategory Age;
-        if (Integer.parseInt(age) < 18) {
-            Age = AgeCategory.child;
-        } else if (Integer.parseInt(age) < 60){
-            Age = AgeCategory.adult;
-        } else {
-            Age = AgeCategory.senior;
+        AgeCategory ageCategory;
+        if (age.equals("")){
+            return "";
         }
-        return String.valueOf(Age);
+        if (Float.parseFloat(age) < 18) {
+            ageCategory = AgeCategory.child;
+        } else if (Float.parseFloat(age) < 60){
+            ageCategory = AgeCategory.adult;
+        } else {
+            ageCategory = AgeCategory.senior;
+        }
+        Age.add(String.valueOf(ageCategory));
+        return String.valueOf(ageCategory);
     }
 
     public void loadFeatures(List<String> allLines){
-        for (int i = 1; i <allLines.size(); i++) {
+        for (int i = 1; i < allLines.size(); i++) {
             String[] doSplit = allLines.get(i).split(";");
             PassengerId.add(doSplit[0]);
-            Survived.add(doSplit[1]);
             Pclass.add(doSplit[2]);
             Name.add(doSplit[3]);
             Sex.add(doSplit[4]);
@@ -68,6 +71,7 @@ public class Entropy {
         Sets.add(Pclass);
         Sets.add(Name);
         Sets.add(Sex);
+        Sets.add(Age);
         Sets.add(SibSp);
         Sets.add(Parch);
         Sets.add(Ticket);
@@ -79,9 +83,6 @@ public class Entropy {
     public void featuresSelection(){
         if (PassengerId.size()<10) {
             Selection.put("PassengerId", 0);
-        }
-        if (Survived.size()<10) {
-            Selection.put("Survived", 1);
         }
         if (Pclass.size()<10) {
             Selection.put("Pclass", 2);
@@ -114,9 +115,11 @@ public class Entropy {
     }
 
     public void displaySelected(){
-        System.out.println("Available features : ");
+        System.out.println("");
+        System.out.println("Available features : " + System.lineSeparator());
         for (Map.Entry<String, Integer> entry : Selection.entrySet()){
             System.out.println(entry.getKey() + " (" + entry.getValue() + ")");
         }
+        System.out.println("");
     }
 }

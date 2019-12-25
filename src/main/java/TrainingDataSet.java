@@ -31,7 +31,7 @@ public class TrainingDataSet implements DAO {
                 String[] split = lines.get(i).split(";");
                 String nbSurvived = split[1];
                 survivedValue.add(nbSurvived);
-                String ageCategory = Entropy.refactorAge(split[feature]);
+                String ageCategory = Entropy.refactorAge(split[5]);
                 featureValue.add(ageCategory);
             }
         }
