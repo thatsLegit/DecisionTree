@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a9fc1303-13a1-4214-a178-f42d759edc4d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VPVjP4CKt8dw0Wc7TPikE4hZAs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ReadFileExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReadFileExample" />
+      <module name="DecisionTree" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReadFileExample" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a9fc1303-13a1-4214-a178-f42d759edc4d" name="Default Changelist" comment="" />
+      <created>1577154851616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577154851616</updated>
+      <workItem from="1577154855450" duration="3900000" />
+      <workItem from="1577186035319" duration="28450000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="466" y="178" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1577202602424">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="466" y="178" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.23.1440.827@0.23.1440.827" timestamp="1577202602424" />
+    <state x="540" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1577233308202">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="540" y="133" key="#com.intellij.ide.util.MemberChooser/0.23.1440.827@0.23.1440.827" timestamp="1577233308202" />
+    <state x="347" y="112" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1577157268083">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="347" y="112" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.23.1440.827@0.23.1440.827" timestamp="1577157268083" />
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom" timestamp="1577238109773">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.bottom/0.23.1440.827@0.23.1440.827" timestamp="1577238109773" />
+    <state width="1358" height="201" key="GridCell.Tab.0.center" timestamp="1577238109772">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.center/0.23.1440.827@0.23.1440.827" timestamp="1577238109772" />
+    <state width="1358" height="201" key="GridCell.Tab.0.left" timestamp="1577238109771">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.left/0.23.1440.827@0.23.1440.827" timestamp="1577238109771" />
+    <state width="1358" height="201" key="GridCell.Tab.0.right" timestamp="1577238109772">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state width="1358" height="201" key="GridCell.Tab.0.right/0.23.1440.827@0.23.1440.827" timestamp="1577238109772" />
+    <state x="357" y="117" key="NewModule_or_Project.wizard" timestamp="1577231641844">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="357" y="117" key="NewModule_or_Project.wizard/0.23.1440.827@0.23.1440.827" timestamp="1577231641844" />
+    <state x="466" y="187" key="extract.method.dialog" timestamp="1577190427811">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="466" y="187" key="extract.method.dialog/0.23.1440.827@0.23.1440.827" timestamp="1577190427811" />
+    <state x="122" y="39" key="new project wizard" timestamp="1577231590214">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="122" y="39" key="new project wizard/0.23.1440.827@0.23.1440.827" timestamp="1577231590214" />
+    <state x="393" y="174" width="670" height="676" key="search.everywhere.popup" timestamp="1577223089895">
+      <screen x="0" y="23" width="1440" height="827" />
+    </state>
+    <state x="393" y="174" width="670" height="676" key="search.everywhere.popup/0.23.1440.827@0.23.1440.827" timestamp="1577223089895" />
+  </component>
+</project>
