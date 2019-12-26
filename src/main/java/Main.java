@@ -3,6 +3,8 @@ public class Main {
         TrainingDataSet training = new TrainingDataSet();
         Entropy entropy = new Entropy();
         DecisionTree decision = new DecisionTree();
+        TestDataSet testDataSet = new TestDataSet();
+        Prediction prediction = new Prediction();
         training.loadFromFile();
         entropy.loadFeatures(training.getAllLines());
         entropy.featuresSelection();
@@ -12,5 +14,10 @@ public class Main {
         training.testNonNullValues();
         decision.trainModel();
         decision.getModel();
+        testDataSet.loadFromFile();
+        testDataSet.extractFeature(TestDataSet.allLines,decision.getFeature());
+        testDataSet.testNonNullValues();
+        prediction.TestLines();
+        prediction.getCorrectlyClassifiedInstancesPercentage();
     }
 }

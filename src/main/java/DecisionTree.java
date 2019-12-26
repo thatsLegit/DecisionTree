@@ -15,6 +15,7 @@ public class DecisionTree {
         do {
             System.out.println("Select one of the available features (enter the corresponding number) : ");
             feature = sc.nextInt();
+            System.out.println("");
         } while (feature!=0 & feature!=2 & feature!=3 & feature!=4 & feature!=5 & feature!=6 & feature!=7 & feature!=8 & feature!=9 & feature!=10 & feature!=11);
     }
 
@@ -50,6 +51,7 @@ public class DecisionTree {
     public HashMap<String, Integer> getModel() {
         for (Map.Entry<String, Integer> entry : model.entrySet()){
             System.out.println("Profile : " + entry.getKey() + " .....survivability : " + entry.getValue());
+            System.out.println("");
         }
         return model;
     }
