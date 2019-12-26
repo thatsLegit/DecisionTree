@@ -5,6 +5,7 @@ public class Main {
         DecisionTree decision = new DecisionTree();
         TestDataSet testDataSet = new TestDataSet();
         Prediction prediction = new Prediction();
+
         training.loadFromFile();
         entropy.loadFeatures(training.getAllLines());
         entropy.featuresSelection();

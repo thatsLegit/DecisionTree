@@ -2,9 +2,11 @@ import java.util.*;
 
 public class DecisionTree {
 
+    //Here is the class where the training and the feature selection happen
+
     Scanner sc = new Scanner(System.in);
-    static HashMap<String, Integer> model;
-    int feature;
+    static HashMap<String, Integer> model;  //Map containing the different profiles and behaviors for a selected feature
+    int feature; //int value of the selected feature
 
     public DecisionTree() {
         this.feature = feature;
@@ -12,17 +14,27 @@ public class DecisionTree {
     }
 
     public void featureSelection(){
+        feature = featureChecker();
+        System.out.println("");
+    }
+
+    public int featureChecker(){
+        boolean featureOK = false;
+        int value;
         do {
             System.out.println("Select one of the available features (enter the corresponding number) : ");
-            feature = sc.nextInt();
-            System.out.println("");
-        } while (feature!=0 & feature!=2 & feature!=3 & feature!=4 & feature!=5 & feature!=6 & feature!=7 & feature!=8 & feature!=9 & feature!=10 & feature!=11);
+            value = sc.nextInt();
+            for (Map.Entry<Integer, String> entry : Entropy.Selection.entrySet()){
+                if (value==entry.getKey()){
+                    featureOK = true;
+                    break;
+                }
+            }
+        } while (!featureOK);
+        return value;
     }
 
     public void trainModel(){
-        //compter le nombre d'observations de chaque classe
-        //compter la somme de la survivance de la classe
-        //faire une rapport des deux, si <0.5, c'est 0, sinon 1.
         Set<String> set = Entropy.Sets.get(feature);
         for (String entry : set){
             System.out.println("profile : " + entry);
@@ -54,5 +66,9 @@ public class DecisionTree {
             System.out.println("");
         }
         return model;
+    }
+
+    public String toString(){
+        return "This decision tree is helping to decide whether a person is going to survive or not based on its " + Entropy.Selection.get(feature);
     }
 }

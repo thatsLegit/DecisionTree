@@ -17,26 +17,28 @@ public class TrainingDataSet implements DAO {
         allLines = new ArrayList<>();
     }
 
+    //extract the needed feature based on the choice
     public void extractFeature(List<String> lines, int feature) {
-        if (feature != 5) {
-            for (int i = 1; i < lines.size(); i++) {
-                String[] split = lines.get(i).split(";");
-                String nbSurvived = split[1];
-                survivedValue.add(nbSurvived);
+        for (int i = 1; i < lines.size(); i++) {
+            String[] split = lines.get(i).split(";");
+            String nbSurvived = split[1];
+            survivedValue.add(nbSurvived);
+            if (feature == 5) {
+                String ageCategory = Entropy.refactorAge(split[feature]);
+                featureValue.add(ageCategory);
+            }
+            else if (feature == 9){
+                String fareCategory = Entropy.refactorFare(split[feature]);
+                featureValue.add(fareCategory);
+            }
+            else {
                 String anyFeature = split[feature];
                 featureValue.add(anyFeature);
-            }
-        } else {
-            for (int i = 1; i < lines.size(); i++) {
-                String[] split = lines.get(i).split(";");
-                String nbSurvived = split[1];
-                survivedValue.add(nbSurvived);
-                String ageCategory = Entropy.refactorAge(split[5]);
-                featureValue.add(ageCategory);
             }
         }
     }
 
+    //Don't forget to modify the name of your directory
     @Override
     public void loadFromFile() {
         Path orderPath = Paths.get("/Users/stepanov/IdeaProjects/DecisionTree/src/main/resources/train.csv");
@@ -48,6 +50,7 @@ public class TrainingDataSet implements DAO {
         }
     }
 
+    //eliminate empty cells for the choosen feature
     @Override
     public void testNonNullValues(){
         for (int i=0;i<featureValue.size();i++){
@@ -57,14 +60,6 @@ public class TrainingDataSet implements DAO {
                 i--;
             }
         }
-    }
-
-    public ArrayList<String> getSurvivedValue() {
-        return survivedValue;
-    }
-
-    public ArrayList<String> getFeatureValue() {
-        return featureValue;
     }
 
     public List<String> getAllLines() {

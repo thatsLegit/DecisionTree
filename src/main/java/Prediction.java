@@ -2,12 +2,14 @@ import java.util.Map;
 
 public class Prediction {
 
+    //Based on the data set, this class will assess the performance of the predictive model
     int correctlyClassifiedInstances;
 
     public Prediction() {
         this.correctlyClassifiedInstances = correctlyClassifiedInstances;
     }
 
+    //calculate the number of correctly classified instances for the selected feature on the test set
     public void TestLines(){
         for (int i =0;i<TestDataSet.featureValue.size();i++){
             int prediction = 0;
@@ -24,6 +26,7 @@ public class Prediction {
         }
     }
 
+    //displays the performance result
     public int getCorrectlyClassifiedInstancesPercentage(){
         System.out.println("");
         System.out.println("Testing the model : " + System.lineSeparator());
