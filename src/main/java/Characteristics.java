@@ -1,11 +1,11 @@
 import java.util.*;
 
-public class Entropy {
+public class Characteristics {
 
     //This class is choosing the most relevant features and displays them
 
     static HashMap<Integer, String> Selection; //Map of the features name + their int value
-    static List<Set<String>> Sets; //List of features, with all its profiles values in sets
+    List<Set<String>> Sets; //List of features, with all its profiles values in sets
     Set<String> PassengerId;
     Set<String> Survived;
     Set<String> Pclass;
@@ -19,7 +19,7 @@ public class Entropy {
     Set<String> Cabin;
     Set<String> Embarked;
 
-    public Entropy() {
+    public Characteristics() {
         Selection = new HashMap<>();
         Sets = new ArrayList<>();
         PassengerId = new HashSet<>();
@@ -129,5 +129,13 @@ public class Entropy {
             System.out.println(entry.getValue() + " (" + entry.getKey() + ")");
         }
         System.out.println("");
+    }
+
+    public HashMap<Integer, String> getSelection() {
+        return Selection;
+    }
+
+    public List<Set<String>> getSets() {
+        return Sets;
     }
 }

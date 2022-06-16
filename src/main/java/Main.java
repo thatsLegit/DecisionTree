@@ -1,24 +1,30 @@
 public class Main {
     public static void main(String[] args) {
-        TrainingDataSet training = new TrainingDataSet();
-        Entropy entropy = new Entropy();
+
+        // Use the files provided in the resources package as some columns has changed
+        // place
+        // from the original files
+
+        Characteristics characteristics = new Characteristics();
         DecisionTree decision = new DecisionTree();
-        TestDataSet testDataSet = new TestDataSet();
+        DataSet trainDataSet = new DataSet("/Users/stepanov/Dev/Java/DecisionTree/src/main/resources/train.csv");
+        DataSet testDataSet = new DataSet("/Users/stepanov/Dev/Java/DecisionTree/src/main/resources/test.csv");
         Prediction prediction = new Prediction();
 
-        training.loadFromFile();
-        entropy.loadFeatures(training.getAllLines());
-        entropy.featuresSelection();
-        entropy.displaySelected();
-        decision.featureSelection();
-        training.extractFeature(training.getAllLines(), decision.getFeature());
-        training.testNonNullValues();
-        decision.trainModel();
-        decision.getModel();
+        trainDataSet.loadFromFile();
+        characteristics.loadFeatures(trainDataSet.getAllLines());
+        characteristics.featuresSelection();
+        characteristics.displaySelected();
+        decision.featureSelection(characteristics.getSelection());
+        trainDataSet.extractFeature(trainDataSet.getAllLines(), decision.getFeature());
+        trainDataSet.testNonNullValues();
+        decision.trainModel(characteristics.getSets(), trainDataSet.getFeatureValue(), trainDataSet.getSurvivedValue());
+        decision.displayResults();
         testDataSet.loadFromFile();
-        testDataSet.extractFeature(TestDataSet.allLines,decision.getFeature());
+        testDataSet.extractFeature(testDataSet.getAllLines(), decision.getFeature());
         testDataSet.testNonNullValues();
-        prediction.TestLines();
-        prediction.getCorrectlyClassifiedInstancesPercentage();
+        prediction.TestLines(testDataSet.getFeatureValue(), decision.getModel(), testDataSet.getSurvivedValue());
+        prediction.getCorrectlyClassifiedInstancesPercentage(testDataSet.getFeatureValue());
+        System.out.println(decision);
     }
 }

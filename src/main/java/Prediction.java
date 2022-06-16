@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Prediction {
@@ -10,14 +12,14 @@ public class Prediction {
     }
 
     //calculate the number of correctly classified instances for the selected feature on the test set
-    public void TestLines(){
-        for (int i =0;i<TestDataSet.featureValue.size();i++){
+    public void TestLines(ArrayList<String> featureValue, HashMap<String, Integer> model, ArrayList<String> survivedValue){
+        for (int i = 0; i< featureValue.size(); i++){
             int prediction = 0;
             int reality = 0;
-            for (Map.Entry<String, Integer> entry2 : DecisionTree.model.entrySet()){
-                if (TestDataSet.featureValue.get(i).equals(entry2.getKey())){
-                    prediction = entry2.getValue();
-                    reality = Integer.parseInt(TestDataSet.survivedValue.get(i));
+            for (Map.Entry<String, Integer> entry : model.entrySet()){
+                if (featureValue.get(i).equals(entry.getKey())){
+                    prediction = entry.getValue();
+                    reality = Integer.parseInt(survivedValue.get(i));
                     if (prediction==reality){
                         correctlyClassifiedInstances++;
                     }
@@ -27,10 +29,10 @@ public class Prediction {
     }
 
     //displays the performance result
-    public int getCorrectlyClassifiedInstancesPercentage(){
+    public int getCorrectlyClassifiedInstancesPercentage(ArrayList<String> featureValue){
         System.out.println("");
         System.out.println("Testing the model : " + System.lineSeparator());
-        System.out.println("Correctly classified instances : " + (correctlyClassifiedInstances*100)/TestDataSet.featureValue.size() + "%");
-        return (correctlyClassifiedInstances*100)/TestDataSet.featureValue.size();
+        System.out.println("Correctly classified instances : " + (correctlyClassifiedInstances*100)/ featureValue.size() + "%");
+        return (correctlyClassifiedInstances*100)/ featureValue.size();
     }
 }
