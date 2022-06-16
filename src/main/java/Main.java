@@ -7,8 +7,8 @@ public class Main {
 
         Characteristics characteristics = new Characteristics();
         DecisionTree decision = new DecisionTree();
-        DataSet trainDataSet = new DataSet("/Users/stepanov/Dev/Java/DecisionTree/src/main/resources/train.csv");
-        DataSet testDataSet = new DataSet("/Users/stepanov/Dev/Java/DecisionTree/src/main/resources/test.csv");
+        DataSet trainDataSet = new DataSet("/Users/iljastepanov/dev/Java/DecisionTree/src/main/resources/train.csv");
+        DataSet testDataSet = new DataSet("/Users/iljastepanov/dev/Java/DecisionTree/src/main/resources/test.csv");
         Prediction prediction = new Prediction();
 
         trainDataSet.loadFromFile();

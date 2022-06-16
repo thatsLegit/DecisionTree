@@ -23,7 +23,7 @@ public class DataSet implements DAO {
     public void extractFeature(List<String> lines, int feature) {
         for (int i = 1; i < lines.size(); i++) {
             String[] split = lines.get(i).split(";");
-            String nbSurvived = split[1000];
+            String nbSurvived = split[1];
             survivedValue.add(nbSurvived);
             if (feature == 5) {
                 String ageCategory = Characteristics.refactorAge(split[feature]);
